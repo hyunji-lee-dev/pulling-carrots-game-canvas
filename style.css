@@ -1,0 +1,148 @@
+:root {
+  /* Color */
+  --color-button: blanchedalmond;
+  --color-message: tomato;
+  --color-background: black;
+
+  /* Font size */
+  --font-large: 2rem;
+  --font-medium: 1.5rem;
+
+  /* Size */
+  --size-border-radius: 8px;
+  --size-spacing: 0.25rem;
+
+  /* Border */
+  --border: solid 3px black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+button {
+  background-color: var(--color-button);
+  border: var(--border);
+  border-radius: var(--size-border-radius);
+  outline: none;
+  cursor: pointer;
+  font-size: var(--font-medium);
+  padding: var(--size-spacing) calc(var(--size-spacing) * 2);
+}
+
+button:hover,
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Info */
+.info {
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-background);
+  opacity: 70%;
+  color: white;
+}
+
+.info__title {
+  font-size: var(--font-large);
+}
+
+/* Game */
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 46.875rem;
+  height: 31.25rem;
+  background: url(img/background.png) center/cover;
+  border-radius: calc(var(--size-border-radius) * 3);
+}
+
+.game__header {
+  padding: calc(var(--size-spacing) * 2) 0;
+}
+
+.header__timer {
+  width: 7.5rem;
+  margin: calc(var(--size-spacing) * 2) auto;
+  padding: var(--size-spacing) 0;
+  background-color: var(--color-message);
+  border: var(--border);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-medium);
+  user-select: none;
+}
+
+.header__counter {
+  width: 3rem;
+  margin: auto;
+  padding: calc(var(--size-spacing) * 2) var(--size-spacing);
+  background-color: var(--color-button);
+  border: var(--border);
+  border-radius: 50%;
+  font-size: var(--font-medium);
+  user-select: none;
+}
+
+.game__field {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.carrot {
+  width: 5rem;
+  height: 5rem;
+}
+
+.bug {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+/* Message */
+.msg {
+  position: absolute;
+  width: 22.5rem;
+  height: 9.375rem;
+  padding: 1.25rem 0;
+  background-color: var(--color-message);
+  border: var(--border);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-large);
+  visibility: hidden;
+}
+
+/* Canvas */
+canvas {
+  position: absolute;
+  width: 46.875rem;
+  height: 15.625rem;
+  transform: translateY(50%);
+}
+
+/* 24rem 이하의 스크린 */
+@media screen and (max-width: 24rem) {
+  .game {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  canvas {
+    width: 100%;
+    height: 50%;
+  }
+}

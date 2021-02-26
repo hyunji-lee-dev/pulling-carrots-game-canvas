@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hyunji Lee" />
+    <meta
+      name="description"
+      content="Game to pull all carrots in limited time"
+    />
+    <link rel="icon" href="img/carrot.png" type="image/png" />
+    <title>Pulling Carrots Game</title>
+    <script
+      src="https://kit.fontawesome.com/da8ce40f6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="info">
+      <h1 class="info__title">Pulling Carrots Game</h1>
+      <h2 class="info__description">
+        Pull all carrots in limited time🥕<br />
+        (Be careful not to touch bugs🐛)
+      </h2>
+    </section>
+    <section class="game">
+      <header class="game__header">
+        <button class="header__btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <div class="header__timer">00:00</div>
+        <div class="header__counter">0</div>
+      </header>
+      <section class="game__field"></section>
+    </section>
+    <section class="msg">
+      <button class="msg__replay">
+        <i class="fas fa-redo"></i>
+      </button>
+      <button class="msg__cancel">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="msg__result"></div>
+    </section>
+    <canvas></canvas>
+  </body>
+</html>
